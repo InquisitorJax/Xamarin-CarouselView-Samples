@@ -2,7 +2,6 @@
 <ContentPage x:Class="CarouselViewSamples.Views.NativeCarouselPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:views="clr-namespace:CarouselViewSamples.Views"
              x:Name="_page">
 	<ContentPage.Content>
@@ -20,11 +19,8 @@
 							       HorizontalOptions="Center"
 							       Text="{Binding Text}"
 							       VerticalOptions="Center" />
-							<carousel:CarouselViewControl Grid.Row="2"
-							                              InterPageSpacing="10"
-							                              ItemsSource="{Binding SubItems}"
-							                              Orientation="Horizontal">
-								<carousel:CarouselViewControl.ItemTemplate>
+							<CarouselView Grid.Row="2" ItemsSource="{Binding SubItems}">
+								<CarouselView.ItemTemplate>
 									<DataTemplate>
 										<Label FontSize="Large"
 										       HeightRequest="80"
@@ -32,8 +28,8 @@
 										       Text="{Binding Text}"
 										       VerticalOptions="Center" />
 									</DataTemplate>
-								</carousel:CarouselViewControl.ItemTemplate>
-							</carousel:CarouselViewControl>
+								</CarouselView.ItemTemplate>
+							</CarouselView>
 						</Grid>
 					</DataTemplate>
 				</CarouselView.ItemTemplate>
