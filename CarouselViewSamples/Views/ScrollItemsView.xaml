@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="CarouselViewSamples.Views.ScrollItemsView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+	<ContentView.Content>
+		<Grid>
+			<CollectionView HeightRequest="42" ItemsSource="{Binding Items}">
+				<CollectionView.ItemsLayout>
+					<LinearItemsLayout Orientation="Horizontal"
+					                   SnapPointsAlignment="Start"
+					                   SnapPointsType="Mandatory" />
+				</CollectionView.ItemsLayout>
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Grid>
+							<Label Margin="16,5,0,5"
+							       HeightRequest="32"
+							       HorizontalOptions="Center"
+							       LineBreakMode="TailTruncation"
+							       Text="{Binding Text}"
+							       VerticalOptions="Center"
+							       WidthRequest="64" />
+						</Grid>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+				<CollectionView.Footer>
+					<Grid WidthRequest="16" />
+				</CollectionView.Footer>
+			</CollectionView>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

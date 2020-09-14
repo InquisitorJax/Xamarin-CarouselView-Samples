@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="CarouselViewSamples.Views.AlexCarouselPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:views="clr-namespace:CarouselViewSamples.Views"
+             x:Name="_page">
+	<ContentPage.Content>
+		<Grid>
+			<carousel:CarouselViewControl HorizontalOptions="FillAndExpand"
+			                              InterPageSpacing="10"
+			                              ItemsSource="{Binding Items}"
+			                              Orientation="Horizontal"
+			                              VerticalOptions="FillAndExpand">
+				<carousel:CarouselViewControl.ItemTemplate>
+					<DataTemplate>
+						<Grid RowDefinitions="Auto, Auto, *">
+							<views:ScrollItemsView BindingContext="{Binding BindingContext, Source={x:Reference _page}}" />
+							<Label Grid.Row="1"
+							       FontSize="Large"
+							       HeightRequest="80"
+							       HorizontalOptions="Center"
+							       Text="{Binding Text}"
+							       VerticalOptions="Center" />
+							<carousel:CarouselViewControl Grid.Row="2"
+							                              InterPageSpacing="10"
+							                              ItemsSource="{Binding SubItems}"
+							                              Orientation="Horizontal">
+								<carousel:CarouselViewControl.ItemTemplate>
+									<DataTemplate>
+										<Label FontSize="Large"
+										       HeightRequest="80"
+										       HorizontalOptions="Center"
+										       Text="{Binding Text}"
+										       VerticalOptions="Center" />
+									</DataTemplate>
+								</carousel:CarouselViewControl.ItemTemplate>
+							</carousel:CarouselViewControl>
+						</Grid>
+					</DataTemplate>
+				</carousel:CarouselViewControl.ItemTemplate>
+
+			</carousel:CarouselViewControl>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

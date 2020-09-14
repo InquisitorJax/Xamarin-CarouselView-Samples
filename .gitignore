@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CarouselViewSamples/obj
+/.vs
+/CarouselViewSamples.Android/obj
+/CarouselViewSamples.iOS/obj
+/CarouselViewSamples/bin/Debug/netstandard2.0
+/CarouselViewSamples.Android/bin/Debug

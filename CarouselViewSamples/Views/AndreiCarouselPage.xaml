@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="CarouselViewSamples.Views.AndreiCarouselPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:views="clr-namespace:CarouselViewSamples.Views"
+             x:Name="_page">
+	<ContentPage.Content>
+		<Grid>
+			<cards:CarouselView IsCyclical="False"
+			                    IsVerticalSwipeEnabled="False"
+			                    ItemsSource="{Binding Items}">
+				<cards:CarouselView.ItemTemplate>
+					<DataTemplate>
+						<Grid RowDefinitions="Auto, Auto, *">
+							<views:ScrollItemsView BindingContext="{Binding BindingContext, Source={x:Reference _page}}" />
+							<Label Grid.Row="1"
+							       FontSize="Large"
+							       HeightRequest="80"
+							       HorizontalOptions="Center"
+							       Text="{Binding Text}"
+							       VerticalOptions="Center" />
+							<cards:CarouselView Grid.Row="2"
+							                    IsCyclical="False"
+							                    IsVerticalSwipeEnabled="False"
+							                    ItemsSource="{Binding SubItems}">
+								<cards:CarouselView.ItemTemplate>
+									<DataTemplate>
+										<Label FontSize="Large"
+										       HeightRequest="80"
+										       HorizontalOptions="Center"
+										       Text="{Binding Text}"
+										       VerticalOptions="Center" />
+									</DataTemplate>
+								</cards:CarouselView.ItemTemplate>
+							</cards:CarouselView>
+						</Grid>
+					</DataTemplate>
+				</cards:CarouselView.ItemTemplate>
+			</cards:CarouselView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
