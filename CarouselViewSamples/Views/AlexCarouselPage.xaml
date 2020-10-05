@@ -7,7 +7,8 @@
              x:Name="_page">
 	<ContentPage.Content>
 		<Grid>
-			<carousel:CarouselViewControl HorizontalOptions="FillAndExpand"
+			<carousel:CarouselViewControl x:Name="_carouselView"
+			                              HorizontalOptions="FillAndExpand"
 			                              InterPageSpacing="10"
 			                              ItemsSource="{Binding Items}"
 			                              Orientation="Horizontal"
