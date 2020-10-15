@@ -26,11 +26,14 @@
 							                    ItemsSource="{Binding SubItems}">
 								<cards:CarouselView.ItemTemplate>
 									<DataTemplate>
-										<Label FontSize="Large"
-										       HeightRequest="80"
-										       HorizontalOptions="Center"
-										       Text="{Binding Text}"
-										       VerticalOptions="Center" />
+										<Grid BackgroundColor="LightGray">
+											<Label FontSize="Large"
+											       HeightRequest="80"
+											       HorizontalOptions="Center"
+											       Text="{Binding Text}"
+											       VerticalOptions="Center" />
+										</Grid>
+
 									</DataTemplate>
 								</cards:CarouselView.ItemTemplate>
 							</cards:CarouselView>

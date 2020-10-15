@@ -2,14 +2,17 @@
 <ContentPage x:Class="CarouselViewSamples.Views.SyncfusionCarouselPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
              xmlns:views="clr-namespace:CarouselViewSamples.Views"
              x:Name="_page">
 	<ContentPage.Content>
 		<Grid>
-			<CarouselView HorizontalOptions="FillAndExpand"
-			              ItemsSource="{Binding Items}"
-			              VerticalOptions="FillAndExpand">
-				<CarouselView.ItemTemplate>
+			<syncfusion:SfRotator DotPlacement="None"
+			                      EnableLooping="False"
+			                      HorizontalOptions="FillAndExpand"
+			                      ItemsSource="{Binding Items}"
+			                      VerticalOptions="FillAndExpand">
+				<syncfusion:SfRotator.ItemTemplate>
 					<DataTemplate>
 						<Grid RowDefinitions="Auto, Auto, *">
 							<views:ScrollItemsView BindingContext="{Binding BindingContext, Source={x:Reference _page}}" />
@@ -19,22 +22,26 @@
 							       HorizontalOptions="Center"
 							       Text="{Binding Text}"
 							       VerticalOptions="Center" />
-							<CarouselView Grid.Row="2" ItemsSource="{Binding SubItems}">
-								<CarouselView.ItemTemplate>
+							<syncfusion:SfRotator Grid.Row="2"
+							                      EnableLooping="False"
+							                      ItemsSource="{Binding SubItems}">
+								<syncfusion:SfRotator.ItemTemplate>
 									<DataTemplate>
-										<Label FontSize="Large"
-										       HeightRequest="80"
-										       HorizontalOptions="Center"
-										       Text="{Binding Text}"
-										       VerticalOptions="Center" />
+										<Grid BackgroundColor="LightGray">
+											<Label FontSize="Large"
+											       HeightRequest="80"
+											       HorizontalOptions="Center"
+											       Text="{Binding Text}"
+											       VerticalOptions="Center" />
+										</Grid>
 									</DataTemplate>
-								</CarouselView.ItemTemplate>
-							</CarouselView>
+								</syncfusion:SfRotator.ItemTemplate>
+							</syncfusion:SfRotator>
 						</Grid>
 					</DataTemplate>
-				</CarouselView.ItemTemplate>
+				</syncfusion:SfRotator.ItemTemplate>
 
-			</CarouselView>
+			</syncfusion:SfRotator>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

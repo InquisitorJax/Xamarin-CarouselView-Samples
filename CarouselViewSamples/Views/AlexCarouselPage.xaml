@@ -29,11 +29,13 @@
 							                              Orientation="Horizontal">
 								<carousel:CarouselViewControl.ItemTemplate>
 									<DataTemplate>
-										<Label FontSize="Large"
-										       HeightRequest="80"
-										       HorizontalOptions="Center"
-										       Text="{Binding Text}"
-										       VerticalOptions="Center" />
+										<Grid BackgroundColor="LightGray">
+											<Label FontSize="Large"
+											       HeightRequest="80"
+											       HorizontalOptions="Center"
+											       Text="{Binding Text}"
+											       VerticalOptions="Center" />
+										</Grid>
 									</DataTemplate>
 								</carousel:CarouselViewControl.ItemTemplate>
 							</carousel:CarouselViewControl>

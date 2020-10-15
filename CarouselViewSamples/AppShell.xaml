@@ -36,6 +36,9 @@
 		<ShellContent Title="Alex"
 		              ContentTemplate="{DataTemplate local:AlexCarouselPage}"
 		              Icon="tab_feed.png" />
+		<ShellContent Title="Syncfusion"
+		              ContentTemplate="{DataTemplate local:SyncfusionCarouselPage}"
+		              Icon="tab_feed.png" />
 		<ShellContent Title="Native"
 		              ContentTemplate="{DataTemplate local:NativeCarouselPage}"
 		              Icon="tab_feed.png" />
