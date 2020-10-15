@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>api29_phone</SelectedDevice>
     <DefaultDevice>api29_phone</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
