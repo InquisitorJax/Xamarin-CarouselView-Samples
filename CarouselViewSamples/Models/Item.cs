@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CarouselViewSamples.Models
 {
-	public class Item
+	public class Item : ModelBase
 	{
 		public Item()
 		{
@@ -18,6 +18,15 @@ namespace CarouselViewSamples.Models
 		public string Description { get; set; }
 
 		public List<SubItem> SubItems{ get; set; }
+
+		private int _selectedSubItemIndex;
+
+		public int SelectedSubItemIndex
+		{
+			get { return _selectedSubItemIndex; }
+			set { SetProperty(ref _selectedSubItemIndex, value); }
+		}
+
 	}
 
 	public class SubItem

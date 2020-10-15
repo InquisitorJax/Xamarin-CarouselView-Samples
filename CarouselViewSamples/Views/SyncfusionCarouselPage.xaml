@@ -24,7 +24,8 @@
 							       VerticalOptions="Center" />
 							<syncfusion:SfRotator Grid.Row="2"
 							                      EnableLooping="False"
-							                      ItemsSource="{Binding SubItems}">
+							                      ItemsSource="{Binding SubItems}"
+							                      SelectedIndex="{Binding SelectedSubItemIndex, Mode=TwoWay}">
 								<syncfusion:SfRotator.ItemTemplate>
 									<DataTemplate>
 										<Grid BackgroundColor="LightGray">
