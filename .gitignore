@@ -8,3 +8,5 @@
 /CarouselViewSamples.iOS/obj
 /CarouselViewSamples/bin/Debug/netstandard2.0
 /CarouselViewSamples.Android/bin/Debug
+/CarouselViewSamples.iOS/bin/iPhoneSimulator/Debug
+/CarouselViewSamples.iOS/CarouselViewSamples.iOS.csproj.user
