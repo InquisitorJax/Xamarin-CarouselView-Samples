@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\SyncfusionCarouselPage.xaml.cs">
+      <DependentUpon>SyncfusionCarouselPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\NativeCarouselPage.xaml.cs">
       <DependentUpon>NativeCarouselPage.xaml</DependentUpon>
     </Compile>
